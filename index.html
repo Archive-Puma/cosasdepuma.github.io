@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <title>Ohana Means: Coming Soon</title>
+  <!-- Important info -->
+  <meta name="author" content="KikePuma">
+  <meta name="description" content="Simple HTML/CSS 'Coming Soon' Website using W3.CSS">
+  <meta name="keywords" content="Ohana, Means, KikePuma, CosasDePuma, ComingSoon, W3, CSS, HTML">
+  <!-- Website cofiguration -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Import css stylesheets and fonts -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+  <style>
+
+  /* Create Animation */
+  .enter-animation span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  .enter-animation span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  .enter-animation:hover span {
+    padding-right: 25px;
+  }
+  .enter-animation:hover span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+    /* Background */
+    .bgimg {
+        background-image: url('sources/background.jpg');
+        min-height: 100%;
+        background-position: center;
+        background-size: cover;
+    }
+    /* Animation Settings */
+    .slow-speed{
+    	animation-duration: 2s;
+    }
+    /* More HTML Style Configuration */
+    body,h1 {font-family: "Raleway", sans-serif}
+    body, html {height: 100%}
+  </style>
+
+  <body>
+    <!-- Background container -->
+    <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+      <!-- Author button -->
+      <a id="author-link" href="https://github.com/OhanaMeans" class="w3-button w3-display-bottomright enter-animation">
+        <span>Ohana Means</span>
+      </a>
+      <!-- Main text -->
+      <div class="w3-display-middle">
+        <h1 id="textt" class="w3-jumbo w3-animate-zoom slow-speed">COMING SOON</h1>
+        <hr class="w3-border-grey" style="margin:auto;width:40%">
+        <p class="w3-large w3-center">My Own Website</p>
+      </div>
+    </div>
+  </body>
+</html>
